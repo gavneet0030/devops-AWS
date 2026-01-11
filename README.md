@@ -391,6 +391,79 @@ CI/CD Automation • Cloud Deployment • Infrastructure Practices
 
 
 
+<h2 align="center">🧠 CI/CD System Flowchart & Execution Flow</h2>
+
+<p align="center">
+  The following flowchart represents the <b>end-to-end CI/CD workflow</b>
+  implemented in this repository using <b>AWS DevOps services</b>.
+</p>
+
+<p align="center">
+  It visually explains how code changes move from a developer’s machine
+  to a deployed application through <b>automated build, deployment,
+  and monitoring stages</b>.
+</p>
+
+<br/>
+
+<p align="center">
+  <img src="flowchart/Untitled%20diagram-2026-01-11-083854.png"
+       alt="DevOps AWS CI/CD Flowchart"
+       width="90%" />
+</p>
+
+<br/>
+
+<h3 align="center">🔁 Flowchart Breakdown</h3>
+
+<p align="center">
+  The workflow begins when a developer pushes code to the repository.
+  This action triggers the CI/CD pipeline, ensuring that every change
+  follows a controlled and automated delivery process.
+</p>
+
+<p align="center">
+  In the <b>Continuous Integration (CI)</b> stage, the pipeline initializes
+  a build environment and executes instructions defined in
+  <b>buildspec.yml</b>. Dependencies are installed, validations are performed,
+  and deployable artifacts are generated.
+</p>
+
+<p align="center">
+  Once the build succeeds, the pipeline transitions into the
+  <b>Continuous Deployment (CD)</b> stage. Deployment behavior is controlled
+  using <b>appspec.yml</b>, which defines file placement rules and lifecycle hooks.
+</p>
+
+<p align="center">
+  During deployment, automation scripts from the <b>scripts/</b> directory
+  execute at different lifecycle stages such as environment preparation,
+  application startup, and validation.
+</p>
+
+<p align="center">
+  The flowchart also highlights <b>decision points</b>, where the pipeline
+  evaluates whether build or deployment steps succeed. In case of failure,
+  the process stops safely and logs are generated for troubleshooting.
+</p>
+
+<p align="center">
+  After a successful deployment, monitoring and logging mechanisms
+  (such as AWS CloudWatch) ensure visibility into application health
+  and deployment status.
+</p>
+
+<br/>
+
+<p align="center">
+  <i>
+    This flowchart acts as a system-level blueprint, demonstrating how
+    automation, cloud services, and DevOps principles work together
+    to deliver reliable and repeatable deployments.
+  </i>
+</p>
+
+<hr/>
 
 
 
